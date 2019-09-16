@@ -7,9 +7,11 @@ class Roll:
         self.defeats = defeats
         self.defeated_by = defeated_by
 
-    def can_defeat(self, roll): # TODO Add tie condition, can't just be true/false
+    def can_defeat(self, roll):
         if roll.name == self.defeats:
-            return True
+            return "win"
+        elif roll.name == self.name:
+            return "tie"
 
 
 class Player:
@@ -61,8 +63,6 @@ def main():
     player1 = Player(name)
     player2 = Player("Computer")
 
-
-
     game_loop(player1, player2, rolls)
 
 
@@ -84,11 +84,11 @@ def game_loop(player1, player2, rolls):
         dramatic_wait(1)
         # display winner for this round
 
-        if p2_roll == p1_roll:
+        if outcome == "tie":
             print("It's a tie!")
             dramatic_wait(1)
 
-        elif outcome:
+        elif outcome == "win":
             print(f"{p1_roll.name} beats {p2_roll.name}!")
             dramatic_wait(1)
             print(f"{player1.name} wins!!!")
