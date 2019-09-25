@@ -1,7 +1,5 @@
 import csv
-import urllib
 from urllib.parse import quote
-import datetime
 from dateutil.parser import parse
 import pytz
 
