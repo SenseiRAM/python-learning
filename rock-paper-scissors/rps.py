@@ -1,5 +1,9 @@
 import random
 import time
+import sys
+import logbook
+
+app_log = logbook.Logger('App')
 
 class Roll:
     def __init__(self, name, defeats, defeated_by):
@@ -17,6 +21,21 @@ class Roll:
 class Player:
     def __init__(self, name):
         self.name = name
+
+def init_logging(filename: str = None):
+    level = logbook.TRACE
+
+    if not filename:
+        logbook.StreamHandler(sys.stdout, level=level).push_application()
+    else:
+        logbook.TimedRotatingFileHandler(filename, level=level).push_application()
+
+    msg = 'Logging initialized, level: {}, mode: {}'.format(
+        level,
+        "stdout mode" if not filename else 'file mode: ' + filename
+    )
+    logger = logbook.Logger('Startup')
+    logger.notice(msg)
 
 
 def print_header():
@@ -57,8 +76,12 @@ def main():
     print_header()
 
     rolls = build_rolls()
+    msg = 'Rolls built'
+    app_log.notice(msg)
 
     name = get_player_name()
+    msg = f'Player enters name as {name}'
+    app_log.notice(msg)
 
     player1 = Player(name)
     player2 = Player("Computer")
@@ -121,4 +144,5 @@ def game_loop(player1, player2, rolls):
             break
 
 if __name__ == "__main__":
+    init_logging('rps.log')
     main()
