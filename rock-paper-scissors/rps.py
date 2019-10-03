@@ -5,7 +5,9 @@ import logbook
 
 app_log = logbook.Logger('App')
 
+
 class Roll:
+
     def __init__(self, name, defeats, defeated_by):
         self.name = name
         self.defeats = defeats
@@ -21,6 +23,7 @@ class Roll:
 class Player:
     def __init__(self, name):
         self.name = name
+
 
 def init_logging(filename: str = None):
     level = logbook.TRACE
@@ -68,9 +71,11 @@ def get_player_roll(rolls, player):
     else:
         return rolls[2]
 
+
 def dramatic_wait(secs):
 
     time.sleep(secs)
+
 
 def main():
     print_header()
@@ -135,13 +140,14 @@ def game_loop(player1, player2, rolls):
     else:
         print(f"\nSorry {player1.name}, but {player2.name} has {cpu_score} points and you lose.")
 
-    while answer not in ['y','n']:
+    while answer not in ['y', 'n']:
         answer = input('Would you like to play again? [y]es or [n]o?').lower()
         if answer == 'y':
             game_loop(player1, player2, rolls)
         elif answer == 'n':
             print("Good game! See you next time!")
             break
+
 
 if __name__ == "__main__":
     init_logging('rps.log')
