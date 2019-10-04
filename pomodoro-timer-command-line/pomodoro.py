@@ -21,13 +21,16 @@ def pomodoro(frequency, duration, program_running, beeps):
 
         time.sleep(float(timer_minutes)*60)
 
-        print(f'Your {timer_minutes} timer has expired. I hope you were able to focus! The current time is {str(datetime.now())}')
+        print(f'Your {timer_minutes} timer has expired. I hope you were able'
+              f' to focus! The current time is {str(datetime.now())}')
 
         while beeps > 0:
             winsound.Beep(frequency, duration)
             beeps -= 1
 
-        time_over = input("Break time! When you're ready to start again, press Y. Enter any other key if you'd like to exit the program.\n")
+        time_over = input("Break time! When you're ready to start again,"
+                          " press Y. Enter any other key if you'd like"
+                          "to exit the program.\n")
 
         if time_over.lower() != 'y':
             program_running = False
