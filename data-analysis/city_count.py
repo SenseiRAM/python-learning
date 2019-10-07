@@ -16,10 +16,11 @@ import csv
 from datetime import datetime
 
 # Essentially using a namedtuple as a class with no methods
-State = namedtuple('State', 'city company employment submit_date')
+Applicant = namedtuple('Applicant', 'city company_name employment_status submit_date')
 
 # Location of data (your location may differ)
 applicant_data = 'applicant_dataset.csv'
+
 
 # Create a defaultdict of states as keys
 # and a list namedtuples as values
@@ -29,36 +30,43 @@ def get_location_data(data):
         for line in csv.DictReader(f):
 
             try:
-                city = line['City']
-                state = line['State']
-                company = line['Company Name']
-                employment = line['Employment Status']
-                submit_date = line['Submit Date']
+                city = line['city']
+                state = line['state']
+                company_name = line['company_name']
+                employment_status = line['employment_status']
+                submit_date = line['submit_date']
             except ValueError:
+                raise
                 continue
 
-            s = State(city=city,
-            company=company,
-            employment=employment,
-            submit_date=submit_date
-            )
+            a = Applicant(city=city,
+                          company_name=company_name,
+                          employment_status=employment_status,
+                          submit_date=submit_date
+                          )
 
-            locations[state].append(s)
+            locations[state].append(a)
     return locations
 
-locations = get_location_data(applicant_data)
-# Empty list to compile data
-cities = []
 
-# Add each instance of a city to the list
-# These three lines of code took me over an hour to figure out :\
-for state in locations:
-    for i, item in enumerate(locations[state]):
-        cities.append(locations[state][i].city)
+def main():
+    locations = get_location_data(applicant_data)
+    # Empty list to compile data
+    cities = []
 
-# Tally the most common cities where applicants are located
-city_count = Counter(cities).most_common(10)
+    # Add each instance of a city to the list
+    # These three lines of code took me over an hour to figure out :\
+    for state in locations:
+        for i, item in enumerate(locations[state]):
+            cities.append(locations[state][i].city)
 
-print(city_count)
+    # Tally the most common cities where applicants are located
+    city_count = Counter(cities).most_common(10)
 
-done = input('Complete, press enter to quit. ')
+    print(city_count)
+
+    done = input('Complete, press enter to quit. ')
+
+
+if __name__ == '__main__':
+    main()
