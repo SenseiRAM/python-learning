@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4289fd6-569f-4223-a9f6-46cc392ed664" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/pip/_vendor/distlib/t32.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/pip/_vendor/distlib/t64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/pip/_vendor/distlib/w32.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/pip/_vendor/distlib/w64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/setuptools/cli-32.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/setuptools/cli-64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/setuptools/cli.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/setuptools/gui-32.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/setuptools/gui-64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Lib/site-packages/setuptools/gui.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/easy_install-3.7.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/easy_install.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/pip.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/pip3.7.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/pip3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/python.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/env/Scripts/pythonw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bs4-scraper/scraper.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1S1iyHe1edJWCOpTtBY3d2pzmeO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bs4-scraper" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4289fd6-569f-4223-a9f6-46cc392ed664" name="Default Changelist" comment="" />
+      <created>1570737755759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570737755759</updated>
+    </task>
+    <servers />
+  </component>
+</project>
