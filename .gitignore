@@ -19,6 +19,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # =========================
-# Operating System Files
+# venvs
 # =========================
 
+\uplink_api\.env\
